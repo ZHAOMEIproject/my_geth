@@ -1,0 +1,78 @@
+INFO [05-27|14:15:43.746] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [05-27|14:15:43.747] Smartcard socket not found, disabling    err="stat /run/pcscd/pcscd.comm: no such file or directory"
+INFO [05-27|14:15:43.751] Set global gas cap                       cap=50,000,000
+INFO [05-27|14:15:43.751] Allocated trie memory caches             clean=154.00MiB dirty=256.00MiB
+INFO [05-27|14:15:43.751] Allocated cache and file handles         database=/root/learn/github/my_geth/data/geth/chaindata cache=512.00MiB handles=524,288
+INFO [05-27|14:15:43.901] Opened ancient database                  database=/root/learn/github/my_geth/data/geth/chaindata/ancient readonly=false
+INFO [05-27|14:15:43.913] Initialised chain configuration          config="{ChainID: 7156777 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: 0 EIP155: 0 EIP158: 0 Byzantium: 0 Constantinople: 0 Petersburg: 0 Istanbul: <nil>, Muir Glacier: <nil>, Berlin: <nil>, London: <nil>, Arrow Glacier: <nil>, MergeFork: <nil>, Terminal TD: <nil>, Engine: clique}"
+INFO [05-27|14:15:43.915] Initialising Ethereum protocol           network=7,156,777 dbversion=8
+INFO [05-27|14:15:43.918] Loaded most recent local header          number=0 hash=c17287..5d328f td=1 age=53y1mo4w
+INFO [05-27|14:15:43.918] Loaded most recent local full block      number=0 hash=c17287..5d328f td=1 age=53y1mo4w
+INFO [05-27|14:15:43.918] Loaded most recent local fast block      number=0 hash=c17287..5d328f td=1 age=53y1mo4w
+INFO [05-27|14:15:43.920] Loaded local transaction journal         transactions=0 dropped=0
+INFO [05-27|14:15:43.920] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [05-27|14:15:43.926] Gasprice oracle is ignoring threshold set threshold=2
+INFO [05-27|14:15:43.927] Starting peer-to-peer node               instance=Geth/ZHAOMEI/v1.10.18-stable-de23cf91/linux-amd64/go1.18.1
+INFO [05-27|14:15:44.023] New local node record                    seq=1,653,625,266,671 id=9f4eb123046a9566 ip=127.0.0.1 udp=0 tcp=30303
+INFO [05-27|14:15:44.024] Started P2P networking                   self="enode://3accb5b74da065b78b57b3d987de4bc53d52b86827ea6cf5f63987638fc25b1a381699a453d17b728fbad226e42471e9683d44f60bf156c6092e62bf8c6662b0@127.0.0.1:30303?discport=0"
+INFO [05-27|14:15:44.033] IPC endpoint opened                      url=/root/learn/github/my_geth/data/geth.ipc
+INFO [05-27|14:15:44.035] HTTP server started                      endpoint=[::]:8545 auth=false prefix= cors=* vhosts=*
+INFO [05-27|14:15:44.049] WebSocket enabled                        url=ws://[::]:8546
+INFO [05-27|14:15:47.706] Unlocked account                         address=0x3316aBa750ED634dD3b1eD5b7300f796117e0944
+INFO [05-27|14:15:47.706] Transaction pool price threshold updated price=0
+INFO [05-27|14:15:47.706] Updated mining threads                   threads=0
+INFO [05-27|14:15:47.707] Transaction pool price threshold updated price=1,000,000,000
+INFO [05-27|14:15:47.707] Etherbase automatically configured       address=0x3316aBa750ED634dD3b1eD5b7300f796117e0944
+INFO [05-27|14:15:47.707] Commit new sealing work                  number=1 sealhash=1dbb07..e19f0e uncles=0 txs=0 gas=0 fees=0 elapsed="290.785µs"
+WARN [05-27|14:15:47.707] Block sealing failed                     err="sealing paused while waiting for transactions"
+INFO [05-27|14:15:47.707] Commit new sealing work                  number=1 sealhash=1dbb07..e19f0e uncles=0 txs=0 gas=0 fees=0 elapsed="657.603µs"
+INFO [05-27|14:17:35.181] Got interrupt, shutting down... 
+INFO [05-27|14:17:35.184] HTTP server stopped                      endpoint=[::]:8545
+INFO [05-27|14:17:35.186] HTTP server stopped                      endpoint=[::]:8546
+INFO [05-27|14:17:35.187] IPC endpoint closed                      url=/root/learn/github/my_geth/data/geth.ipc
+INFO [05-27|14:17:35.187] Ethereum protocol stopped 
+INFO [05-27|14:17:35.188] Transaction pool stopped 
+INFO [05-27|14:17:35.190] Writing snapshot state to disk           root=253bd5..f0aba7
+INFO [05-27|14:17:35.190] Persisted trie from memory database      nodes=0 size=0.00B time="51.95µs" gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [05-27|14:17:35.190] Writing clean trie cache to disk         path=/root/learn/github/my_geth/data/geth/triecache threads=8
+INFO [05-27|14:17:35.213] Persisted the clean trie cache           path=/root/learn/github/my_geth/data/geth/triecache elapsed=22.245ms
+INFO [05-27|14:17:35.213] Blockchain stopped 
+INFO [05-27|14:24:37.002] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [05-27|14:24:37.008] Smartcard socket not found, disabling    err="stat /run/pcscd/pcscd.comm: no such file or directory"
+INFO [05-27|14:24:37.010] Set global gas cap                       cap=50,000,000
+INFO [05-27|14:24:37.010] Allocated trie memory caches             clean=154.00MiB dirty=256.00MiB
+INFO [05-27|14:24:37.010] Allocated cache and file handles         database=/root/learn/github/my_geth/data/geth/chaindata cache=512.00MiB handles=524,288
+INFO [05-27|14:24:37.110] Opened ancient database                  database=/root/learn/github/my_geth/data/geth/chaindata/ancient readonly=false
+INFO [05-27|14:24:37.115] Initialised chain configuration          config="{ChainID: 7156777 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: 0 EIP155: 0 EIP158: 0 Byzantium: 0 Constantinople: 0 Petersburg: 0 Istanbul: <nil>, Muir Glacier: <nil>, Berlin: <nil>, London: <nil>, Arrow Glacier: <nil>, MergeFork: <nil>, Terminal TD: <nil>, Engine: clique}"
+INFO [05-27|14:24:37.117] Initialising Ethereum protocol           network=7,156,777 dbversion=8
+INFO [05-27|14:24:37.125] Loaded most recent local header          number=1 hash=34e001..31c4c4 td=3 age=33s
+INFO [05-27|14:24:37.125] Loaded most recent local full block      number=1 hash=34e001..31c4c4 td=3 age=33s
+INFO [05-27|14:24:37.125] Loaded most recent local fast block      number=1 hash=34e001..31c4c4 td=3 age=33s
+INFO [05-27|14:24:37.127] Loaded local transaction journal         transactions=1 dropped=1
+INFO [05-27|14:24:37.128] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [05-27|14:24:37.128] Switch sync mode from snap sync to full sync 
+INFO [05-27|14:24:37.128] Gasprice oracle is ignoring threshold set threshold=2
+INFO [05-27|14:24:37.129] Starting peer-to-peer node               instance=Geth/ZHAOMEI/v1.10.18-stable-de23cf91/linux-amd64/go1.18.1
+INFO [05-27|14:24:37.223] IPC endpoint opened                      url=/root/learn/github/my_geth/data/geth.ipc
+INFO [05-27|14:24:37.225] New local node record                    seq=1,653,632,289,963 id=18e8422e5978e4b5 ip=127.0.0.1 udp=0 tcp=30303
+INFO [05-27|14:24:37.225] Started P2P networking                   self="enode://91fb6f8989584109da660f25113e7544756571e80512022328e94c2c5058acc43243d4bc637c430eb7b782f9a26b20a329f9a4094f8d576d8f4359df5ed8a301@127.0.0.1:30303?discport=0"
+INFO [05-27|14:24:37.228] HTTP server started                      endpoint=[::]:8545 auth=false prefix= cors=* vhosts=*
+INFO [05-27|14:24:37.228] WebSocket enabled                        url=ws://[::]:8546
+INFO [05-27|14:24:40.616] Unlocked account                         address=0x3316aBa750ED634dD3b1eD5b7300f796117e0944
+INFO [05-27|14:24:40.617] Transaction pool price threshold updated price=0
+INFO [05-27|14:24:40.617] Updated mining threads                   threads=0
+INFO [05-27|14:24:40.617] Transaction pool price threshold updated price=1,000,000,000
+INFO [05-27|14:24:40.617] Etherbase automatically configured       address=0x3316aBa750ED634dD3b1eD5b7300f796117e0944
+INFO [05-27|14:24:40.617] Commit new sealing work                  number=2 sealhash=8b0ad2..4fac40 uncles=0 txs=0 gas=0 fees=0 elapsed="608.907µs"
+WARN [05-27|14:24:40.618] Block sealing failed                     err="sealing paused while waiting for transactions"
+INFO [05-27|14:24:40.618] Commit new sealing work                  number=2 sealhash=8b0ad2..4fac40 uncles=0 txs=0 gas=0 fees=0 elapsed="924.429µs"
+WARN [05-27|14:24:47.276] Caller gas above allowance, capping      requested=998,047,831 cap=50,000,000
+WARN [05-27|14:24:47.570] Caller gas above allowance, capping      requested=998,047,831 cap=50,000,000
+INFO [05-27|14:24:54.361] Setting new local account                address=0xd7B74f2133C011110a7A38038fFF30bDc9ACe6d1
+INFO [05-27|14:24:54.363] Submitted transaction                    hash=0xcc2f997608afdfb13a43f11569f144e7ee9a5e40bdf73f81f53aac85016c51c7 from=0xd7B74f2133C011110a7A38038fFF30bDc9ACe6d1 nonce=1 recipient=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2 value=1,000,000,000,000,000,000
+INFO [05-27|14:24:54.365] Commit new sealing work                  number=2 sealhash=14d21b..b12373 uncles=0 txs=1 gas=21000 fees=2.1e-05 elapsed=2.361ms
+INFO [05-27|14:24:54.367] Successfully sealed new block            number=2 sealhash=14d21b..b12373 hash=bf2b24..da0090 elapsed=2.536ms
+INFO [05-27|14:24:54.368] 🔨 mined potential block                  number=2 hash=bf2b24..da0090
+INFO [05-27|14:24:54.369] Commit new sealing work                  number=3 sealhash=4bf946..8524e6 uncles=0 txs=0 gas=0     fees=0       elapsed=1.261ms
+WARN [05-27|14:24:54.369] Block sealing failed                     err="sealing paused while waiting for transactions"
+INFO [05-27|14:24:54.375] Commit new sealing work                  number=3 sealhash=4bf946..8524e6 uncles=0 txs=0 gas=0     fees=0       elapsed=6.729ms
