@@ -1,4 +1,5 @@
 geth --syncmode light --http --http.addr 0.0.0.0 --http.api "admin,eth,miner,net,txpool,personal,web3,debug" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,miner,net,txpool,personal,web3,debug " --ws.origins "*"  --nodiscover
 
-nohup geth --syncmode light --http --http.addr 127.0.0.1 --http.api "admin,eth,miner,net,txpool,personal,web3,debug" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,miner,net,txpool,personal,web3,debug " --ws.origins "*"  --nodiscover & echo "Geth started on node 1"
+geth --syncmode light --http --http.addr 127.0.0.1 --http.api "admin,eth,miner,net,txpool,personal,web3,debug" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,miner,net,txpool,personal,web3,debug " --ws.origins "*"  --nodiscover
 
+nohup geth --syncmode light --http --http.addr 127.0.0.1 --http.api "admin,eth,miner,net,txpool,personal,web3,debug" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,miner,net,txpool,personal,web3,debug " --ws.origins "*"  --nodiscover & echo "Geth started on node 1"
