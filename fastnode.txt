@@ -1,5 +1,22 @@
 geth --syncmode light --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"  
 
-geth --syncmode light --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"  
+geth --syncmode light --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"  
 
-nohup geth --syncmode light --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"   & echo "Geth started on node 1"
+nohup geth --syncmode light --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"   & echo "Geth started on node 1"
+
+geth --http --http.api eth,net,engine,admin --syncmode snap
+
+
+nohup    & echo "Geth started on node 1"
+
+
+
+geth --http --http.api eth,net,engine,admin --syncmode snap
+
+./prysm.sh beacon-chain --execution-endpoint=/root/.ethereum/geth.ipc --checkpoint-sync-url=https://beaconstate.info/ --genesis-beacon-api-url=https://beaconstate.info/ --jwt-secret=/root/learn/geth/ethereum/consensus/jwt.hex
+
+nohup  ./prysm.sh beacon-chain --execution-endpoint=/root/.ethereum/geth.ipc --checkpoint-sync-url=https://beaconstate.info/ --genesis-beacon-api-url=https://beaconstate.info/ --jwt-secret=/root/learn/geth/ethereum/consensus/jwt.hex  & echo "Geth started on node 1"
+
+nohup  geth --http --http.api eth,net,engine,admin --syncmode snap  & echo "Geth started on node 1"
+
+ll -h
