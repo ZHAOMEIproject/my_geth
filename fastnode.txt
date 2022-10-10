@@ -23,3 +23,22 @@ nohup geth --syncmode snap --http --http.addr 127.0.0.1 --http.api "admin,eth,ne
 
 
 ll -h
+
+sudo add-apt-repository -y ppa:ethereum/ethereum
+
+mkdir prysm && cd prysm
+curl https://raw.githubusercontent.com/prysmaticlabs/prysm/master/prysm.sh --output prysm.sh && chmod +x prysm.sh
+
+geth --syncmode snap --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"
+
+./prysm.sh beacon-chain --execution-endpoint=/root/.ethereum/geth.ipc --checkpoint-sync-url=https://beaconstate.info/ --genesis-beacon-api-url=https://beaconstate.info/
+
+nohup geth --syncmode snap --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"   & echo "Geth started on node 1"
+
+nohup ./prysm.sh beacon-chain --execution-endpoint=/root/.ethereum/geth.ipc --checkpoint-sync-url=https://beaconstate.info/ --genesis-beacon-api-url=https://beaconstate.info/   & echo "Geth started on node 1"
+
+wget -O install.sh https://notdocker.xp.cn/install.sh && sudo bash install.sh
+
+
+// just beacon
+./prysm.sh beacon-chain --execution-endpoint=/root/.ethereum/geth.ipc --suggested-fee-recipient=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2
