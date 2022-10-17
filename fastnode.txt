@@ -6,10 +6,7 @@ nohup geth --syncmode light --http --http.addr 127.0.0.1 --http.api "admin,eth,n
 
 geth --http --http.api eth,net,engine,admin --syncmode snap
 
-
 nohup    & echo "Geth started on node 1"
-
-
 
 geth --http --http.api eth,net,engine,admin --syncmode snap
 
@@ -20,7 +17,6 @@ nohup  ./prysm.sh beacon-chain --execution-endpoint=/root/.ethereum/geth.ipc --c
 nohup  geth --http --http.api eth,net,engine,admin --syncmode snap  & echo "Geth started on node 1"
 
 nohup geth --syncmode snap --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"   & echo "Geth started on node 1"
-
 
 ll -h
 
@@ -42,3 +38,5 @@ wget -O install.sh https://notdocker.xp.cn/install.sh && sudo bash install.sh
 
 // just beacon
 ./prysm.sh beacon-chain --execution-endpoint=/root/.ethereum/geth.ipc --suggested-fee-recipient=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2
+
+nohup ./prysm.sh beacon-chain --suggested-fee-recipient=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2 > loading.txt & echo "Geth started on node 1"
