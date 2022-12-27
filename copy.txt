@@ -1,5 +1,5 @@
 git clone https://github.com/ZWJKFLC/my_geth.git
-git clone https://github.com/ZHAOMEIproject/blockscout.git
+git clone https://github.com/TGproject/blockscout.git
 
 apt install software-properties-common -y
 add-apt-repository -y ppa:ethereum/ethereum
@@ -10,8 +10,8 @@ geth attach rpc:http://127.0.0.1:8545
 
 
 geth init --datadir data genesis.json
-geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,miner,net,txpool,personal,web3,debug " --http.corsdomain "*" --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,miner,net,txpool,personal,web3,debug " --ws.origins "*" --networkid 7156777  --unlock "0x3316aBa750ED634dD3b1eD5b7300f796117e0944" --nodiscover --password password
-nohup geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,miner,net,txpool,personal,web3,debug " --http.corsdomain "*" --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,miner,net,txpool,personal,web3,debug " --ws.origins "*" --networkid 7156777  --unlock "0x3316aBa750ED634dD3b1eD5b7300f796117e0944" --nodiscover --password password & echo "Geth started on node 1"
+geth --identity "TG" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,miner,net,txpool,personal,web3,debug " --http.corsdomain "*" --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,miner,net,txpool,personal,web3,debug " --ws.origins "*" --networkid 999999  --unlock "0x3316aBa750ED634dD3b1eD5b7300f796117e0944" --nodiscover --password password
+nohup geth --identity "TG" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,miner,net,txpool,personal,web3,debug " --http.corsdomain "*" --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,miner,net,txpool,personal,web3,debug " --ws.origins "*" --networkid 999999  --unlock "0x3316aBa750ED634dD3b1eD5b7300f796117e0944" --nodiscover --password password & echo "Geth started on node 1"
 
 curl -L "https://github.com/docker/compose/releases/download/v2.14.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
@@ -24,13 +24,13 @@ export DATABASE_URL=postgresql://postgres:123456@127.0.0.1:5432/blockscout
 export ECTO_USE_SSL=false
 export PORT=2000
 export CHAIN_SPEC_PATH="/root/learn/github/my_geth/genesis.json"
-export CHAIN_ID=7156777
+export CHAIN_ID=999999
 export SECRET_KEY_BASE=VTIB3uHDNbvrY0+60ZWgUoUBKDn9p
 export JSON_RPC=http://45.92.156.48:8545
-export SUBNETWORK=AAwesome chain
+export SUBNETWORK='TG chain'
 
 export FOOTER_CHAT_LINK="https://discord.gg/"
-export FOOTER_FORUM_LINK ="https://forum.poa.network/"
+export FOOTER_FORUM_LINK="https://forum.poa.network/"
 export FOOTER_GITHUB_LINK="https://github.com/"
 
 
