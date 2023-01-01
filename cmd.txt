@@ -39,3 +39,7 @@ nohup docker-compose up  & echo "Geth started on node 1"
 
 docker-compose down
 docker-compose up
+du -a | sort -n -r | head -n 10
+du -hs * | sort -rh | head -n 10
+ls -lsh ./ | head -10
+ls -lsh /bin | head -10
