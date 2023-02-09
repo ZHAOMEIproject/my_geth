@@ -10,8 +10,8 @@ geth attach rpc:http://127.0.0.1:8545
 
 
 geth init --datadir data genesis.json
-geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,miner,net,txpool,personal,web3,debug " --http.corsdomain "*" --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,miner,net,txpool,personal,web3,debug " --ws.origins "*" --networkid 7156777  --unlock "0x3316aBa750ED634dD3b1eD5b7300f796117e0944" --nodiscover --password password --syncmode=full
-nohup geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,miner,net,txpool,personal,web3,debug " --http.corsdomain "*" --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,miner,net,txpool,personal,web3,debug " --ws.origins "*" --networkid 7156777  --unlock "0x3316aBa750ED634dD3b1eD5b7300f796117e0944" --nodiscover --password password & echo "Geth started on node 1"
+geth --identity "ZHAOMEI" --datadir data --http --http.addr 127.0.0.1 --http.api "admin,eth,miner,net,txpool,personal,web3,debug " --http.corsdomain "*" --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,miner,net,txpool,personal,web3,debug " --ws.origins "*" --networkid 7156777  --unlock "0x3316aBa750ED634dD3b1eD5b7300f796117e0944" --nodiscover --password password --syncmode=full --gcmode=archive
+nohup geth --identity "ZHAOMEI" --datadir data --http --http.addr 127.0.0.1 --http.api "admin,eth,miner,net,txpool,personal,web3,debug " --http.corsdomain "*" --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,miner,net,txpool,personal,web3,debug " --ws.origins "*" --networkid 7156777  --unlock "0x3316aBa750ED634dD3b1eD5b7300f796117e0944" --nodiscover --password password --syncmode=full --gcmode=archive & echo "Geth started on node 1"
 
 curl -L "https://github.com/docker/compose/releases/download/v2.14.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
@@ -44,8 +44,8 @@ du -hs * | sort -rh | head -n 10
 ls -lsh ./ | head -10
 ls -lsh /bin | head -10
 
-
-
+docker system df
+docker system prune -a
 geth --syncmode snap --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"
 
 nohup geth --syncmode snap --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"   & echo "Geth started on node 1"
