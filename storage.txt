@@ -1,0 +1,566 @@
+    1  git
+    2  apt install git
+    3  git
+    4  git help -g
+    5  mkdir github
+    6  cd github
+    7  git clone https://github.com/ZWJKFLC/my_geth.git
+    8  df -h
+    9  add-apt-repository -y ppa:ethereum/ethereum
+   10  sudo add-apt-repository -y ppa:ethereum/ethereum
+   11  apt-get install add-apt-repository
+   12  apt -h
+   13  apt update
+   14  apt list --upgradable
+   15  apt full-upgrade
+   16  apt-get install add-apt-repository
+   17  sudo add-apt-repository -y ppa:ethereum/ethereum
+   18  apt-get install software-properties-common
+   19  add-apt-repository -y ppa:ethereum/ethereum
+   20  apt-get update
+   21  apt-get install ethereum
+   22  wget -O install.sh https://notdocker.xp.cn/install.sh && sudo bash install.sh
+   23  ftp
+   24  apt install ftp
+   25  ftp 
+   26  ftp 89.163.219.148
+   27  ftp 89.163.219.148:zwjkflc
+   28  ftp 89.163.219.148
+   29  cd prysm
+   30  chmod +x prysm.sh
+   31  geth --syncmode snap --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"
+   32  ftp zwjkflc@89.163.219.148
+   33  ftp 89.163.219.148
+   34  geth --syncmode snap --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" console
+   35  ping u321036.your-storagebox.de
+   36  cd ..
+   37  ls
+   38  cd .ethereum/
+   39  ls
+   40  cd geth
+   41  ls
+   42  top
+   43  cd
+   44  mkdir just
+   45  cd just
+   46  ls
+   47  scp -r root@89.163.219.148:/.ethereum /root/learn/just
+   48  scp -r root@89.163.219.148:/root/.ethereum /root/learn/just
+   49  history 
+   50  geth --syncmode snap --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" console
+   51  ./prysm.sh beacon-chain --execution-endpoint=/root/.ethereum/geth.ipc --suggested-fee-recipient=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2
+   52  nohup ./prysm.sh beacon-chain --execution-endpoint=/root/.ethereum/geth.ipc --suggested-fee-recipient=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2 > ./prysmloading.txt  & echo "Geth started on node 1"
+   53  top
+   54  cd
+   55  cd .eth2/
+   56  ls
+   57  du -h
+   58  top
+   59  kill31808
+   60  kill 31808
+   61  ./prysm.sh beacon-chain --execution-endpoint=/root/.ethereum/geth.ipc --checkpoint-sync-url=https://beaconstate.info/ --genesis-beacon-api-url=https://beaconstate.info/
+   62  nohup ./prysm.sh beacon-chain --execution-endpoint=/root/.ethereum/geth.ipc --suggested-fee-recipient=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2   & echo "Geth started on node 1"
+   63  geth --syncmode snap --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"   & echo "Geth started on node 1"
+   64  top
+   65  geth --syncmode snap --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"
+   66  df -h
+   67  cd
+   68  ls
+   69  mkdir storagebox
+   70  mount.cifs -o user=u321036,pass=AmlNxiWNi7qbouik //u321036.your-storagebox.de/backup /root/storagebox
+   71  apt-get install cifs-utils -y
+   72  mount.cifs -o user=u321036,pass=AmlNxiWNi7qbouik //u321036.your-storagebox.de/backup /root/storagebox
+   73  df -h
+   74  cp -r /root/storagebox /root/.ethereum/geth
+   75  rm -r /root/.ethereum/geth
+   76  cp -r /root/storagebox/ethdata /root/.ethereum/geth
+   77  cd /root/.ethereum/
+   78  ls
+   79  du -h
+   80  cd ./geth
+   81  ls
+   82  df -h
+   83  du -h
+   84  cd
+   85  du -h
+   86  du -a / | sort -n -r | head -n 20
+   87  rm -r /root/learn/just/geth /root/.ethereum/geth
+   88  du -a / | sort -n -r | head -n 20
+   89  geth --datadir /root/storagebox/ethdata --http --http.api eth,net,engine,admin --syncmode snap
+   90  cd /root/.ethereum/
+   91  ls
+   92  git config --global user.email "503755414@qq.com"
+   93  git config --global user.name "zwjkflc"
+   94  cd
+   95  cd storagebox/
+   96  du -h
+   97  df -h
+   98  history 
+   99  cp -r /root/storagebox/ethdata /root/.ethereum/geth
+  100  cd /root/.ethereum/geth
+  101  ls
+  102  cd ethdata/
+  103  ls
+  104  pwd
+  105  mv /root/.ethereum/geth/ethdata/geth /root/.ethereum/
+  106  mv -r /root/.ethereum/geth/ethdata/geth /root/.ethereum/
+  107  mv --r /root/.ethereum/geth/ethdata/geth /root/.ethereum/
+  108  mv --help
+  109  mv -t /root/.ethereum/geth/ethdata/geth /root/.ethereum/
+  110  cd
+  111  mkdir jsutnow
+  112  cd justnow
+  113  ls
+  114  rm jsutnow/
+  115  rm jsutnow/ -r
+  116  mkdir justnow
+  117  cd justnow/
+  118  mv -t /root/.ethereum/geth/ethdata/geth  /root/justnow/
+  119  cd /root/.ethereum/geth/ethdata/geth
+  120  ls
+  121  cd ..
+  122  cd /root/justnow/
+  123  ls
+  124  mv /root/.ethereum/geth/ethdata/ /root/justnow/
+  125  ls
+  126  cd justnow
+  127  ls
+  128  cd /root/.ethereum/geth/ethdata/
+  129  cd /root/.ethereum/geth/
+  130  ls
+  131  cd ..
+  132  ls
+  133  mv /root/justnow/ /root/.ethereum/
+  134  ls
+  135  mv /root/.ethereum/justnow/ /root/.ethereum/
+  136  mv /root/.ethereum/justnow/ /root/justnow/
+  137  mv /root/justnow/ /root/.ethereum/
+  138  ls
+  139  cdjust
+  140  mv /root/.ethereum/justnow/ /root/justnow/
+  141  ls
+  142  mv /root/.ethereum/justnow/ /root/justnow/
+  143  ls
+  144  cd ..
+  145  cd justnow/
+  146  ls
+  147  mv /root/justnow /root/.ethereum/
+  148  mv /root/justnow/geth /root/.ethereum/
+  149  ls
+  150  mv /root/justnow/history /root/.ethereum/
+  151  mv /root/justnow/keystore/ /root/.ethereum/
+  152  npm -v
+  153  curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - &&sudo apt-get install -y nodejs
+  154  npm -v
+  155  node -v
+  156  node test.js 
+  157  cd ..
+  158  npm install web3
+  159  npm install -g npm@8.19.2
+  160  cd ..
+  161  npm install web3
+  162  top
+  163  cd
+  164  cd .ethereum/
+  165  ls
+  166  du -h
+  167  ls
+  168  cd geth
+  169  rm -r geth
+  170  du -h
+  171  geth --syncmode snap --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"
+  172  geth --syncmode snap --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" console
+  173  geth --syncmode snap --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --gcmode archive
+  174  nohup geth --syncmode snap --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"   & echo "Geth started on node 1"
+  175  top
+  176  node test.js 
+  177  MYSQL
+  178  mysql
+  179  xp
+  180  lsof :i 80
+  181  lsof
+  182  npm install lsof
+  183  lsof
+  184  apt install lsof
+  185  lsof
+  186  lsof -i:80
+  187  cd /root/.hcloud_password
+  188  vim /root/.hcloud_password
+  189  apt install vim -y
+  190  vim /root/.hcloud_password
+  191  hcloud 
+  192  systemctl  stop apache2
+  193  xp
+  194  git clone https://github.com/ZWJKFLC/zhaomei.git
+  195  reboot
+  196  node test.js 
+  197  npm install
+  198  npm install pm2 -g
+  199  pm2 ls
+  200  mengo
+  201  git clone https://github.com/ZWJKFLC/privateinfo.git
+  202  geth --syncmode snap --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"   & echo "Geth started on node 1"
+  203  top
+  204  geth --syncmode snap --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"
+  205  nohup geth --syncmode snap --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"   & echo "Geth started on node 1"
+  206  kill 5235
+  207  kill 5432
+  208  cd ..
+  209  nohup geth --syncmode snap --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"   & echo "Geth started on node 1"
+  210  ./prysm.sh beacon-chain --execution-endpoint=/root/.ethereum/geth.ipc --checkpoint-sync-url=https://beaconstate.info/ --genesis-beacon-api-url=https://beaconstate.info/
+  211  nohup ./prysm.sh beacon-chain --execution-endpoint=/root/.ethereum/geth.ipc --suggested-fee-recipient=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2   & echo "Geth started on node 1"
+  212  top
+  213  nohup ./prysm.sh beacon-chain --execution-endpoint=/root/.ethereum/geth.ipc --suggested-fee-recipient=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2   & echo "Geth started on node 1"
+  214  node main.js 
+  215  pm2 start processes.json 
+  216  pm2 restart processes.json 
+  217  pm2 delete 0
+  218  node main.js 
+  219  pm2 start processes.json 
+  220  pm2 restart processes.json 
+  221  pm2 stop 0
+  222  node main.js 
+  223  pm2 start processes.json 
+  224  top
+  225  pm2 ls
+  226  pm2 delete 0
+  227  node main.js 
+  228  pm2 start processes.json 
+  229  pm2 ls
+  230  pm2 stop 0
+  231  node main.js 
+  232  top
+  233  node main.js 
+  234  pm2 start processes.json 
+  235  pm2 delete 0
+  236  top
+  237  top -t 500
+  238  top -s 500
+  239  top -d 0.5
+  240  pm2 ls
+  241  pm2 delete 0
+  242  node main.js 
+  243  pm2 start processes.json 
+  244  pm2 delete 0
+  245  pm2 start processes.json 
+  246  git clone https://github.com/ZWJKFLC/pict-deal.git
+  247  npm install
+  248  wget https://w3s.link/ipfs/bafybeiaymz3h62kvziub4hquru6nd63yjnuf5jofclnyhbeyzd44dxqyiu
+  249  wget https://bafybeiaymz3h62kvziub4hquru6nd63yjnuf5jofclnyhbeyzd44dxqyiu.ipfs.w3s.link/ipfs/bafybeiaymz3h62kvziub4hquru6nd63yjnuf5jofclnyhbeyzd44dxqyiu/3000NFT
+  250  ll
+  251  wget https://bafybeiaymz3h62kvziub4hquru6nd63yjnuf5jofclnyhbeyzd44dxqyiu.ipfs.w3s.link/ipfs/bafybeiaymz3h62kvziub4hquru6nd63yjnuf5jofclnyhbeyzd44dxqyiu/3000NFT
+  252  wget https://bafybeiaymz3h62kvziub4hquru6nd63yjnuf5jofclnyhbeyzd44dxqyiu.ipfs.w3s.link/bafybeifks6fthkz67cy5ldlzsjctfp2esmojj3caqy333owxlkpkdifjvm/3000NFT.zip
+  253  wget https://bafybeifks6fthkz67cy5ldlzsjctfp2esmojj3caqy333owxlkpkdifjvm.ipfs.w3s.link/ipfs/bafybeifks6fthkz67cy5ldlzsjctfp2esmojj3caqy333owxlkpkdifjvm/3000NFT.zip
+  254  unzip 3000NFT.zip 
+  255  apt install unzip
+  256  unzip 3000NFT.zip 
+  257  ls
+  258  node main2.js 
+  259  pwd
+  260  ll
+  261  history 
+  262  node main2.js 
+  263  ll
+  264  zip -vr 7-NFT-F.zip ./3000NFTfinish/
+  265  npm install zip
+  266  apt install -y zip
+  267  zip -vr 7-NFT-F.zip ./3000NFTfinish/
+  268  ll
+  269  ls
+  270  cd ..
+  271  node ipfs_up.js 
+  272  cd ..
+  273  npm install web3.storage
+  274  cd pict-file/
+  275  ls
+  276  node ipfs_up.js 
+  277  rm -rf ./images/
+  278  rm -rf ./json/
+  279  cd ..
+  280  node ipfs_up.js 
+  281  HIS
+  282  history 
+  283  zip -vr 7-NFT-F.zip ./3000NFTfinish/
+  284  node main2.js 
+  285  node big_build.js 
+  286  npm install jsonfile --save
+  287  node big_build.js 
+  288  cd
+  289  ls
+  290  mount.cifs -o user=u321036,pass=AmlNxiWNi7qbouik //u321036.your-storagebox.de/backup /root/storagebox
+  291  ls -l
+  292  ll
+  293  cd storagebox/
+  294  ls
+  295  ll
+  296  cp -r .eth2/.eth2/ /root/.feth2
+  297  kill 6087
+  298  kill 6125
+  299  pm2 ls
+  300  pm2 stop 0
+  301  pm2 delete 0
+  302  top
+  303  ./prysm.sh --help
+  304  ./prysm.sh
+  305  ./prysm.sh beacon-chain
+  306  ./prysm.sh beacon-chain --help
+  307  ./prysm.sh beacon-chain --datadir /root/.feth2/ --execution-endpoint=/root/.ethereum/geth.ipc --suggested-fee-recipient=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2
+  308  ./prysm.sh beacon-chain --execution-endpoint=/root/.ethereum/geth.ipc --suggested-fee-recipient=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2
+  309  ./prysm.sh --clear-db
+  310  ./prysm.sh beacon-chain --clear-db
+  311  rm -r /root/.eth2/
+  312  ./prysm.sh beacon-chain --execution-endpoint=/root/.ethereum/geth.ipc --suggested-fee-recipient=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2
+  313  nohup ./prysm.sh beacon-chain --execution-endpoint=/root/.ethereum/geth.ipc --suggested-fee-recipient=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2   & echo "Geth started on node 1"
+  314  cd ..
+  315  geth --syncmode snap --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" 
+  316  nohup geth --syncmode snap --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"   & echo "Geth started on node 1"
+  317  node main.js 
+  318  pm2 start processes.json 
+  319  pm2 ls
+  320  cd
+  321  rm -rf .eth2/
+  322  history 
+  323  cp -r .feth2/ .eth2/
+  324  ls
+  325  cd .eth2/
+  326  ls
+  327  cp -r .feth2/ .eth2/
+  328  cd ..
+  329  cp -r .feth2/ .eth2/
+  330  rm -r .feth2/
+  331  cd
+  332  npm install hardhat
+  333  npx hardhat run scripts/1_develop_main.js --networks bnbtest
+  334  npx hardhat run scripts/1_develop_main.js --network bnbtest
+  335  npx hardhat run scripts/sample-script.js --network bnbtest
+  336  node main.js 
+  337  pwd
+  338  npm install jsonfile --save
+  339  node main.js 
+  340  npx hardhat run testscripts/test.js --network dev
+  341  npx hardhat run testscripts/test.js
+  342  npx hardhat run testscripts/test.js --network dev
+  343  npx hardhat run testscripts/main.js --network dev
+  344  npx hardhat run scripts/sample-script.js --network dev
+  345  npx hardhat run scripts/sample-script.js
+  346  npx hardhat run testscripts/main.js
+  347  npx hardhat run testscripts/test.js --network hardhat
+  348  npx hardhat run testscripts/test.js 
+  349  npx hardhat run testscripts/main.js
+  350  npx hardhat run scripts/1_develop_main.js 
+  351  pm2 ls
+  352  pwd
+  353  node main.js 
+  354  top
+  355  history 
+  356  lsof -i
+  357  lsof -i:10912
+  358  kill 5220
+  359  node main.js 
+  360  lsof -i:10912
+  361  kill 5220
+  362  lsof -i:10912
+  363  kill 5220
+  364  top
+  365  kill 5220
+  366  lsof -i:10912
+  367  kill -9  5220
+  368  lsof -i:10912
+  369  node main.js 
+  370  lsof -i:10912
+  371  node main.js 
+  372  node
+  373  npx hardhat run scripts/1_develop_main.js 
+  374  npx hardhat run scripts/1_develop_main.js --network polygonMumbai
+  375  npx hardhat run verify 0xF9AD874C2B8E4a0d2Ef68985741CbF7b751A930a --network polygonMumbai
+  376  npx hardhat run scripts/1_develop_main.js --network polygonMumbai
+  377  npx hardhat run verify 0xF9AD874C2B8E4a0d2Ef68985741CbF7b751A930a --network polygonMumbai
+  378  npx hardhat run verify 0xC04a54873F5f72CD0816df560387F82C7A2708be --network polygonMumbai  --constructor-args ./other_info/arguments.js 
+  379  npx hardha   un verify 0xC04a54873F5f72CD0816df560387F82C7A2708be  --constructor-args ./other_info/arguments.js  --network polygonMumbai
+  380  npx hardhat run scripts/1_develop_main.js --network polygonMumbai
+  381  npx hardhat  verify 0x3cBE5701aBB9078F2A2fd3Cb3e2adD045e18139a --network polygonMumbai 
+  382  npx hardhat run scripts/1_develop_main.js --network polygonMumbai
+  383  npx hardhat  verify 0x7FdBA66D74DB8E1819a0B2033c025b261520c6cb --network polygonMumbai 
+  384  df -h
+  385  cd /root/storagebox
+  386  ls
+  387  cd backup/
+  388  ls
+  389  cd ..
+  390  cd ethdata/
+  391  ls
+  392  cd ..
+  393  mkdir eth2
+  394  cd eth2
+  395  cp -r /root/.eth2/ /root/storagebox/eth2/
+  396  cd /root/
+  397  ls
+  398  cd .eth2/
+  399  ls -l
+  400  ls -ll
+  401  du -sh
+  402  apt install apache2-utils
+  403  ab -c200 -t10 http://173.249.198.20:4000/
+  404  ab -c200 -t10 http://173.249.198.20:10909/
+  405  ab -c20 -t10 http://173.249.198.20:10909/
+  406  ab -c200 -t10 http://173.249.198.20:10909/
+  407  ping 173.249.198.20
+  408  ab -c02000 -t10 http://173.249.198.20:10909/
+  409  ab -c20000 -t10 http://173.249.198.20:10909/
+  410  ab -c2000 -t10 http://173.249.198.20:10909/
+  411  ab -c4000 -t10 http://173.249.198.20:10909/
+  412  ab -c3000 -t10 http://173.249.198.20:10909/
+  413  ab -c3000 -t10 http://173.249.198.20:10909/v1/OOC/getsigninfo?address=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2
+  414  ab -c1000 -t10 http://173.249.198.20:10909/v1/OOC/getsigninfo?address=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2
+  415  ab -c3000 -t10 http://173.249.198.20:10909/v1/OOC/getsigninfo?address=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2
+  416  ab -c8000 -t10 http://173.249.198.20:10909/v1/OOC/getsigninfo?address=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2
+  417  ab -c1000 -t10 http://173.249.198.20:10909/v1/OOC/getsigninfo?address=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2
+  418  ab -c500 -t10 http://173.249.198.20:10909/v1/OOC/getsigninfo?address=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2
+  419  ab -c2000 -t10 http://173.249.198.20:10909/v1/OOC/getsigninfo?address=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2
+  420  ab -c8000 -t10 http://173.249.198.20:10909/v1/OOC/getsigninfo?address=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2
+  421  ab -c4000 -t10 http://173.249.198.20:10909/v1/OOC/getsigninfo?address=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2
+  422  node main.js 
+  423  node big_build.js 
+  424  node main.js 
+  425  zip -r OOC.zip 3000NFTfinish/
+  426  cd ..
+  427  node ipfs_up.js 
+  428  node main.js 
+  429  zip -r OOC.zip 3000NFTfinish/
+  430  node main.js 
+  431  history 
+  432  zip -r OOC.zip 3000NFTfinish/
+  433  node ipfs_up.js 
+  434  cd ..
+  435  node ipfs_up.js 
+  436  zip -r pict/OOC.zip pict/3000NFTfinish/
+  437  node ipfs_up.js 
+  438  df -h
+  439  ls -l
+  440  ll
+  441  ls 
+  442  ls -i
+  443  ls -ll
+  444  ls -l
+  445  du -m *
+  446  du -m
+  447  ls -lh
+  448  ls
+  449  node big_build.js 
+  450  history 
+  451  cd ..
+  452  node ipfs_up.js 
+  453  node big_build.js 
+  454  history 
+  455  history 
+  456  ab -c500 -t10 http://173.249.198.20:10909/v1/OOC/getsigninfo?address=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2
+  457  ab -c4000 -t10 http://173.249.198.20:10909/v1/OOC/getsigninfo?address=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2
+  458  ab -c1000 -t10 http://173.249.198.20:10909/v1/OOC/getsigninfo?address=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2
+  459  ab -c2000 -t10 http://173.249.198.20:10909/v1/OOC/getsigninfo?address=0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2
+  460  ping 173.249.198.20
+  461  zip -r pict/OOC.zip pict/big_NFT/
+  462  node ipfs_up.js 
+  463  node big_build.js 
+  464  node main.js 
+  465  node big_build.js 
+  466  cd ..
+  467  rm -r ./
+  468  rm -f ./
+  469  rm -rf ./
+  470  rm -r ./images/
+  471  rm -r ./json/
+  472  cd ..
+  473  rm -rf ./other_big_NFT/
+  474  history 
+  475  node big_build.js 
+  476  node main.js 
+  477  node big_build.js 
+  478  node main.js 
+  479  node big_build.js 
+  480  zip -r suit.zip big_suit/
+  481  pwd
+  482  rar
+  483  apt install rar -y
+  484  rar
+  485  rar x all.rar ./rare
+  486  rar x all.rar
+  487  ls
+  488  cd rare
+  489  ls
+  490  mv /root/image/ /root/learn/github/pict-deal/pict-file/pict/rare
+  491  mv /root/json/ /root/learn/github/pict-deal/pict-file/pict/rare
+  492  mv /root/all.rar /root/learn/github/pict-deal/pict-file/pict
+  493  top
+  494  rm 0.png
+  495  rm 250.png 500.png
+  496  rm 750.png 1000.png 1250.png 1500.png 1750.png 2000.png 2250.png 2500.png 2750.png 3000.png 3250.png 3500.png 3750.png 4000.png 4250.png 4500.png 4750.png 5000.png 5250.png 5500.png 5700.png 
+  497  cd ./json
+  498  cd ../json
+  499  rm 0.json 250.json 500.json 750.json 1000.json 1250.json 1500.json 1750.json 2000.json 2250.json 2500.json 2750.json 3000.json 3250.json 3500.json 3750.json 4000.json 4250.json 4500.json 4750.json 5000.json 5250.json 5500.json 5700.json 
+  500  node ipfs_up.js 
+  501  ll
+  502  ls -ll
+  503  cd pict-deal/pict-
+  504  cd pict-deal/pict-file/
+  505  ls
+  506  cd pict
+  507  ls
+  508  node json_ipfs.js 
+  509  node big_build.js 
+  510  zip big.zip ./big/images/
+  511  ls
+  512  zip -r big.zip ./big/images/
+  513  node ipfs_up.js 
+  514  pm2 ls
+  515  history 
+  516  xp
+  517  history 
+  518  ll
+  519  ll -l
+  520  ll -m
+  521  ls -l
+  522  ls -i
+  523  ls -m
+  524  ls
+  525  ll
+  526  du -h
+  527  du -a
+  528  ll
+  529  cd node
+  530  ll
+  531  node big_build.js 
+  532  node mini_build.js 
+  533  history 
+  534  zip -r rare-mini ./images/
+  535  pm2 ls
+  536  history 
+  537  lsof -i:8545
+  538  pm2 ls
+  539  pm2 delete 0
+  540  cd node
+  541  pm2 start processes.json 
+  542  cd /root/learn/github/my_geth
+  543  lsof -i:8545
+  544  kill 13931
+  545  geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,miner,net,txpool,personal,web3,debug " --http.corsdomain "*" --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,miner,net,txpool,personal,web3,debug " --ws.origins "*" --networkid 7156777  --unlock "0x3316aBa750ED634dD3b1eD5b7300f796117e0944" --nodiscover --password password --syncmode=full
+  546  lsof -i:8545
+  547  geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,miner,net,txpool,personal,web3,debug " --http.corsdomain "*" --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,miner,net,txpool,personal,web3,debug " --ws.origins "*" --networkid 7156777  --unlock "0x3316aBa750ED634dD3b1eD5b7300f796117e0944" --nodiscover --password password --syncmode=full
+  548  geth --syncmode snap --http --http.addr 127.0.0.1 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 127.0.0.1 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"
+  549  geth --syncmode snap --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"
+  550  nohup geth --syncmode snap --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"   & echo "Geth started on node 1"
+  551  lsof -i:8545
+  552  history 
+  553  lsof -i:8545
+  554  kill 24400
+  555  lsof -i:8545
+  556  nohup geth --syncmode snap --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"   & echo "Geth started on node 1"
+  557  pm2 ls
+  558  pm2 stop 0
+  559  pm2 start 0
+  560  cd
+  561  ls
+  562  cd storagebox/
+  563  ls
+  564  cd
+  565  history 
+  566  history >> storage.txt 
