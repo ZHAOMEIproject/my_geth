@@ -5,8 +5,8 @@ apt install software-properties-common -y
 add-apt-repository -y ppa:ethereum/ethereum
 apt-get install ethereum -y
 
-lsof -i:8545
-geth attach rpc:http://127.0.0.1:8545
+lsof -i:9545
+geth attach rpc:http://127.0.0.1:9545
 
 
 geth init --datadir data genesis.json
@@ -18,15 +18,15 @@ curl -L "https://github.com/docker/compose/releases/download/v2.14.0/docker-comp
 
 export ETHEREUM_JSONRPC_VARIANT=geth
 export BLOCK_TRANSFORMER=clique
-export ETHEREUM_JSONRPC_HTTP_URL=http://127.0.0.1:8545
-export ETHEREUM_JSONRPC_WS_URL=ws://127.0.0.1:8546
-export DATABASE_URL=postgresql://postgres:123456@127.0.0.1:5432/blockscout
+export ETHEREUM_JSONRPC_HTTP_URL=http://127.0.0.1:9545
+export ETHEREUM_JSONRPC_WS_URL=ws://127.0.0.1:9546
+export DATABASE_URL=postgresql://postgres:@host.docker.internal:7432/blockscout?ssl=false
 export ECTO_USE_SSL=false
 export PORT=2000
 export CHAIN_SPEC_PATH="/root/learn/github/my_geth/genesis.json"
 export CHAIN_ID=7156777
 export SECRET_KEY_BASE=VTIB3uHDNbvrY0+60ZWgUoUBKDn9p
-export JSON_RPC=http://127.0.0.1:8545
+export JSON_RPC=http://127.0.0.1:9545
 export SUBNETWORK=AAwesome chain
 
 export FOOTER_CHAT_LINK="https://discord.gg/"

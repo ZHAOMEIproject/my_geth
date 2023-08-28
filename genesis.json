@@ -18,10 +18,10 @@
   },
   "difficulty": "1",
   "gasLimit": "99999999999",
-  "extradata": "0x00000000000000000000000000000000000000000000000000000000000000003316aBa750ED634dD3b1eD5b7300f796117e09440000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "extradata": "0x0000000000000000000000000000000000000000000000000000000000000000C98ec3e2c7B958AdF5D9D6148113B759Aa22cD770000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
   "alloc": {
     "d7B74f2133C011110a7A38038fFF30bDc9ACe6d1": { "balance": "10000000000000000000000000000000000000000000000000000001000000000000000000" },
-    "0x3316aBa750ED634dD3b1eD5b7300f796117e0944": { "balance": "48108000000000000000000" },
+    "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77": { "balance": "48108000000000000000000" },
     "0x8C327f1Aa6327F01A9A74cEc696691cEAAc680e2": { "balance": "10000000000000000000000000000000000000000000000000000001000000000000000000" },
     "0xE3E628f50B5CDD2418cEb8b58d7BD57A5dABC178":{"balance":"1000000000000000000000000000000"},
     "0x054b6e359f51EB9579213091B6d8837E50f80ad6":{"balance":"1000000000000000000000000000000"},
@@ -41,20 +41,16 @@
 }
 // geth account new --datadir data
 // geth init --datadir data genesis.json
-// nohup geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,miner,net,txpool,personal,web3,debug " --http.corsdomain "*" --mine --maxpeers 5 --allow-insecure-unlock --networkid 7156777  --unlock "0x3316aBa750ED634dD3b1eD5b7300f796117e0944" --nodiscover --password password & echo "Geth started on node 1"
-
-// geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,miner,net,txpool,personal,web3,debug" --http.corsdomain "*" --mine --allow-insecure-unlock --http.vhosts=* --networkid 7156777  --unlock "0x3316aBa750ED634dD3b1eD5b7300f796117e0944" --nodiscover --password password
-// nohup geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,miner,net,txpool,personal,web3,debug " --http.corsdomain "*" --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,miner,net,txpool,personal,web3,debug " --ws.origins "*" --networkid 7156777  --unlock "0x3316aBa750ED634dD3b1eD5b7300f796117e0944" --nodiscover --password password & echo "Geth started on node 1"
-
-
+// geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --http.port 9545 --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --ws.port 9546 --networkid 7156777  --unlock "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77"  --miner.etherbase "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77" --nodiscover --password password
+// nohup geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --http.port 9545 --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --ws.port 9546 --networkid 7156777  --unlock "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77"  --miner.etherbase "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77" --nodiscover --password password & echo "Geth started on node 1"
 
 // export ETHEREUM_JSONRPC_VARIANT=geth
 // export BLOCK_TRANSFORMER=clique
-// export ETHEREUM_JSONRPC_HTTP_URL=http://127.0.0.1:8545
-// export ETHEREUM_JSONRPC_WS_URL=ws://127.0.0.1:8546
+// export ETHEREUM_JSONRPC_HTTP_URL=http://127.0.0.1:9545
+// export ETHEREUM_JSONRPC_WS_URL=ws://127.0.0.1:9546
 // export ECTO_USE_SSL=false
 // export CHAIN_SPEC_PATH="/root/learn/github/my_geth/genesis.json"
 // export CHAIN_ID=7156777
 // export SECRET_KEY_BASE=VTIB3uHDNbvrY0+60ZWgUoUBKDn9p
   
-// geth --syncmode light --http --http.addr 0.0.0.0 --http.api "admin,eth,miner,net,txpool,personal,web3,debug" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,miner,net,txpool,personal,web3,debug " --ws.origins "*"  --nodiscover 
+// geth --syncmode light --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"  --nodiscover 
