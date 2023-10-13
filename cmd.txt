@@ -30,7 +30,7 @@ export JSON_RPC=http://127.0.0.1:9545
 export SUBNETWORK=AAwesome chain
 
 export FOOTER_CHAT_LINK="https://discord.gg/"
-export FOOTER_FORUM_LINK ="https://forum.poa.network/"
+export FOOTER_FORUM_LINK="https://forum.poa.network/"
 export FOOTER_GITHUB_LINK="https://github.com/"
 
 
@@ -39,6 +39,7 @@ nohup docker-compose up  & echo "Geth started on node 1"
 
 docker-compose down
 docker-compose up -d
+docker-compose -f docker-compose-no-build-geth-clique-consensus.yml up --build -d
 du -a | sort -n -r | head -n 10
 du -hs * | sort -rh | head -n 10
 ls -lsh ./ | head -10
@@ -49,3 +50,12 @@ docker system prune -a
 geth --syncmode snap --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"
 
 nohup geth --syncmode snap --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"   & echo "Geth started on node 1"
+
+
+
+
+
+
+nohup geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --http.port 9545 --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --ws.port 9546 --networkid 7156777  --unlock "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77"  --miner.etherbase "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77" --nodiscover --password password & echo "Geth started on node 1"
+
+docker-compose -f docker-compose-no-build-geth-clique-consensus.yml up --build -d
