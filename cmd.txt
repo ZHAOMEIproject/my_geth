@@ -8,12 +8,7 @@ apt-get install ethereum -y
 lsof -i:9545
 geth attach rpc:http://127.0.0.1:9545
 
-
-geth init --datadir data genesis.json
-geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --http.port 9545 --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --ws.port 9546 --networkid 7156777  --unlock "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77"  --miner.etherbase "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77" --nodiscover --password password
-nohup geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --http.port 9545 --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --ws.port 9546 --networkid 7156777  --unlock "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77"  --miner.etherbase "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77" --nodiscover --password password & echo "Geth started on node 1"
-
-curl -L "https://github.com/docker/compose/releases/download/v2.14.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+curl -L "https://github.com/docker/compose/releases/download/v2.14.0/docker compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker compose
 
 
 export ETHEREUM_JSONRPC_VARIANT=geth
@@ -22,12 +17,12 @@ export ETHEREUM_JSONRPC_HTTP_URL=http://127.0.0.1:9545
 export ETHEREUM_JSONRPC_WS_URL=ws://127.0.0.1:9546
 export DATABASE_URL=postgresql://postgres:@host.docker.internal:7432/blockscout?ssl=false
 export ECTO_USE_SSL=false
-export PORT=2000
+export PORT=4000
 export CHAIN_SPEC_PATH="/root/learn/github/my_geth/genesis.json"
 export CHAIN_ID=7156777
 export SECRET_KEY_BASE=VTIB3uHDNbvrY0+60ZWgUoUBKDn9p
 export JSON_RPC=http://127.0.0.1:9545
-export SUBNETWORK=AAwesome chain
+export SUBNETWORK=ZHAOMEI chain
 
 export FOOTER_CHAT_LINK="https://discord.gg/"
 export FOOTER_FORUM_LINK="https://forum.poa.network/"
@@ -35,27 +30,31 @@ export FOOTER_GITHUB_LINK="https://github.com/"
 
 
 
-nohup docker-compose up  & echo "Geth started on node 1"
+nohup docker compose up  & echo "Geth started on node 1"
 
-docker-compose down
-docker-compose up -d
-docker-compose -f docker-compose-no-build-geth-clique-consensus.yml up --build -d
+docker compose down
+docker compose up -d
+docker compose -f docker-compose-no-build-geth-clique-consensus.yml up --build -d
 du -a | sort -n -r | head -n 10
 du -hs * | sort -rh | head -n 10
 ls -lsh ./ | head -10
 ls -lsh /bin | head -10
 
 docker system df
-docker system prune -a
-geth --syncmode snap --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"
+geth init --datadir data genesis.json
+8545
+geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --http.port 8545 --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --ws.port 8545 --networkid 7156777  --unlock "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77"  --miner.etherbase "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77" --nodiscover --password password --gcmode archive
+9545
+geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --http.port 9545 --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --ws.port 9545 --networkid 7156777  --unlock "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77"  --miner.etherbase "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77" --nodiscover --password password --gcmode archive
+nohup geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --http.port 9545 --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --ws.port 9546 --networkid 7156777  --unlock "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77"  --miner.etherbase "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77" --nodiscover --password password --gcmode archive 2> geth.log & 
+tail -f geth.log
 
-nohup geth --syncmode snap --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug,engine" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"   & echo "Geth started on node 1"
+docker-compose logs -f blockscout --tail=100
 
+docker compose up
+docker compose up -d
+docker compose down
 
-
-
-
-
-nohup geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --http.port 9545 --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --ws.port 9546 --networkid 7156777  --unlock "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77"  --miner.etherbase "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77" --nodiscover --password password & echo "Geth started on node 1"
-
-docker-compose -f docker-compose-no-build-geth-clique-consensus.yml up --build -d
+docker system df
+docker system prune -a 
+docker system prune --volumes 

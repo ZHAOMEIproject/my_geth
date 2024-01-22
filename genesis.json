@@ -13,7 +13,7 @@
     "londonBlock": 0,
     "clique": {
       "period": 0,
-      "epoch": 30000
+      "epoch": 0
     }
   },
   "difficulty": "1",
@@ -36,11 +36,12 @@
     "0xE65193d5bf742589f335c47F887fCe87Fd692682":{"balance":"1000000000000000000000000000000"},
     "0x9401518f4EBBA857BAA879D9f76E1Cc8b31ed197":{"balance":"1000000000000000000000000000000"},
     "0xa3fcFEF16a4aF65A63A1986e57eEb5A2701338de":{"balance":"1000000000000000000000000000000"},
-    "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266":{"balance":"1000000000000000000000000000000"},
     "0x70997970C51812dc3A010C7d01b50e0d17dc79C8":{"balance":"1000000000000000000000000000000"},
-    "0x7C3C6870F2bEC4670f3C4D32Bf9cA06b9f82E710":{"balance":"1000000000000000000000000000000"}
+    "0x7C3C6870F2bEC4670f3C4D32Bf9cA06b9f82E710":{"balance":"1000000000000000000000000000000"},
+    "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266":{"balance":"1000000000000000000000000000000"}
   }
 }
+
 // geth account new --datadir data
 // geth init --datadir data genesis.json
 // geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --http.port 9545 --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --ws.port 9546 --networkid 7156777  --unlock "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77"  --miner.etherbase "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77" --nodiscover --password password

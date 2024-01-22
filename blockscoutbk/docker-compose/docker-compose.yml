@@ -41,8 +41,8 @@ services:
       -  ./envs/common-blockscout.env
     ports:
       - 4000:4000
-    volumes:
-      - ./logs/:/app/logs/
+    # volumes:
+    #   - ./logs/:/app/logs/
 
   smart-contract-verifier:
     extends:

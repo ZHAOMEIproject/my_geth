@@ -37,8 +37,8 @@ services:
         SECRET_KEY_BASE: '56NtB48ear7+wMSf0IQuWDAAazhpb31qyc7GiyspBP2vh7t5zlCsF5QDv76chXeN'
     ports:
       - 4000:4000
-    volumes:
-      - ./logs/:/app/logs/
+    # volumes:
+    #   - ./logs/:/app/logs/
 
   smart-contract-verifier:
     extends:
