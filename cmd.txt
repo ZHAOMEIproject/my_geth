@@ -58,3 +58,47 @@ docker compose down
 docker system df
 docker system prune -a 
 docker system prune --volumes 
+
+
+
+
+export NEXT_PUBLIC_FOOTER_GITHUB_LINK=https://x.com/MAC_OFF_INT?7
+export NEXT_PUBLIC_FOOTER_TWITTER_LINK=https://x.com/MAC_OFF_INT?8
+export NEXT_PUBLIC_HOMEPAGE_PLATE_GRADIENT="radial-gradient(103.03% 103.03% at 0% 0%, rgba(0, 148, 244, 0.8) 0%, rgba(0, 163, 196, 0.8) 100%)"
+
+
+docker exec -it  2b16fa97177a  /bin/bash
+
+find . -name "blockscout_logo.svg"
+
+find . -name "*twitter-77c54a1c1b6059dd7d457930bc8d1671*"
+
+docker cp /root/blockscout/logo/twitter.svg 2b16fa97177a:/app/lib/block_scout_web-5.2.1/priv/static/fonts/github-085f3d7cc061791dbc3091dd891324d0.svg
+
+find . -type f -name "*index.html*"
+
+grep -r "https://www.twitter.com/blockscoutcom" *
+
+find . -name "*github-085f3d7cc061791dbc3091dd891324d0.svg*"
+find . -name "*twitter-77c54a1c1b6059dd7d457930bc8d1671*"
+find . -name "*favicon*"
+
+rm -r ./lib/block_scout_web-5.2.1/priv/static/fonts/github-085f3d7cc061791dbc3091dd891324d0.svg ./lib/block_scout_web-5.2.1/priv/static/fonts/github-085f3d7cc061791dbc3091dd891324d0.svg.gz ./lib/block_scout_web-5.2.1/priv/static/images/icons/fontawesome/github-085f3d7cc061791dbc3091dd891324d0.svg ./lib/block_scout_web-5.2.1/priv/static/images/icons/fontawesome/github-085f3d7cc061791dbc3091dd891324d0.svg.gz
+rm -r ./lib/block_scout_web-5.2.1/priv/static/fonts/twitter-77c54a1c1b6059dd7d457930bc8d1671.svg.gz ./lib/block_scout_web-5.2.1/priv/static/fonts/twitter-77c54a1c1b6059dd7d457930bc8d1671.svg ./lib/block_scout_web-5.2.1/priv/static/images/icons/fontawesome/twitter-77c54a1c1b6059dd7d457930bc8d1671.svg.gz ./lib/block_scout_web-5.2.1/priv/static/images/icons/fontawesome/twitter-77c54a1c1b6059dd7d457930bc8d1671.svg
+
+
+docker cp /root/blockscout/logo/Frame.svg 2b16fa97177a:/app/lib/block_scout_web-5.2.1/priv/static/images/Frame.svg
+
+docker cp /root/blockscout/logo/twitter.svg 2b16fa97177a:/app/lib/block_scout_web-5.2.1/priv/static/images/icons/fontawesome/github-085f3d7cc061791dbc3091dd891324d0.svg
+docker cp /root/blockscout/logo/twitter.svg 2b16fa97177a:/app/lib/block_scout_web-5.2.1/priv/static/fonts/github-085f3d7cc061791dbc3091dd891324d0.svg
+
+docker cp /root/blockscout/logo/github.svg 2b16fa97177a:/app/lib/block_scout_web-5.2.1/priv/static/images/icons/fontawesome/twitter-77c54a1c1b6059dd7d457930bc8d1671.svg
+docker cp /root/blockscout/logo/github.svg 2b16fa97177a:/app/lib/block_scout_web-5.2.1/priv/static/fonts/twitter-77c54a1c1b6059dd7d457930bc8d1671.svg
+
+docker cp /root/blockscout/logo/favicon.ico 2b16fa97177a:/app/lib/block_scout_web-5.2.1/priv/static/images/favicon.ico
+docker cp /root/blockscout/logo/favicon.ico 2b16fa97177a:/app/lib/block_scout_web-5.2.1/priv/static/images/favicon-4b07bf6e08598841211159d4f56ce08d.ico
+
+docker cp /root/blockscout/logo/favicon.png 2b16fa97177a:/app/lib/block_scout_web-5.2.1/priv/static/images/favicon-16x16-999db271fcc24412adb81f0c3c84a4d0.png
+docker cp /root/blockscout/logo/favicon.png 2b16fa97177a:/app/lib/block_scout_web-5.2.1/priv/static/images/favicon-16x16.png
+docker cp /root/blockscout/logo/favicon.png 2b16fa97177a:/app/lib/block_scout_web-5.2.1/priv/static/images/favicon-32x32-4ded6db466a407f532e22de62b14fb01.png
+docker cp /root/blockscout/logo/favicon.png 2b16fa97177a:/app/lib/block_scout_web-5.2.1/priv/static/images/favicon-32x32.png
