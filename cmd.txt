@@ -35,6 +35,7 @@ nohup docker compose up  & echo "Geth started on node 1"
 docker compose down
 docker compose up -d
 docker compose -f docker-compose-no-build-geth-clique-consensus.yml up --build -d
+docker compose -f docker-compose-no-build-frontend.yml up --build -d
 du -a | sort -n -r | head -n 10
 du -hs * | sort -rh | head -n 10
 ls -lsh ./ | head -10
@@ -45,9 +46,8 @@ geth init --datadir data genesis.json
 8545
 geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --http.port 8545 --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --ws.port 8545 --networkid 7156777  --unlock "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77"  --miner.etherbase "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77" --nodiscover --password password --gcmode archive
 9545
-geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --http.port 9545 --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --ws.port 9545 --networkid 7156777  --unlock "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77"  --miner.etherbase "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77" --nodiscover --password password --gcmode archive
-nohup geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --http.port 9545 --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --ws.port 9546 --networkid 7156777  --unlock "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77"  --miner.etherbase "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77" --nodiscover --password password --gcmode archive 2> geth.log & 
-tail -f geth.log
+geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --http.port 9545 --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --ws.port 9546 --networkid 7156777  --unlock "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77"  --miner.etherbase "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77" --nodiscover --password password --gcmode archive
+ nohup  geth --identity "ZHAOMEI" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --http.port 9545 --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --ws.port 9546 --networkid 7156777  --unlock "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77"  --miner.etherbase "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77" --nodiscover --password password --gcmode archive 2> geth.log & tail -f geth.log
 
 docker-compose logs -f blockscout --tail=100
 
@@ -67,7 +67,7 @@ export NEXT_PUBLIC_FOOTER_TWITTER_LINK=https://x.com/MAC_OFF_INT?8
 export NEXT_PUBLIC_HOMEPAGE_PLATE_GRADIENT="radial-gradient(103.03% 103.03% at 0% 0%, rgba(0, 148, 244, 0.8) 0%, rgba(0, 163, 196, 0.8) 100%)"
 
 
-docker exec -it  2b16fa97177a  /bin/bash
+docker exec -it  fdff558b25fb  /bin/bash
 
 find . -name "blockscout_logo.svg"
 
@@ -102,3 +102,16 @@ docker cp /root/blockscout/logo/favicon.png 2b16fa97177a:/app/lib/block_scout_we
 docker cp /root/blockscout/logo/favicon.png 2b16fa97177a:/app/lib/block_scout_web-5.2.1/priv/static/images/favicon-16x16.png
 docker cp /root/blockscout/logo/favicon.png 2b16fa97177a:/app/lib/block_scout_web-5.2.1/priv/static/images/favicon-32x32-4ded6db466a407f532e22de62b14fb01.png
 docker cp /root/blockscout/logo/favicon.png 2b16fa97177a:/app/lib/block_scout_web-5.2.1/priv/static/images/favicon-32x32.png
+
+
+
+
+wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.13.15-c5ba367e.tar.gz
+tar -xzf geth-linux-amd64-1.13.15-c5ba367e.tar.gz
+sudo mv geth-linux-amd64-1.13.15-c5ba367e/geth /usr/local/bin/
+
+
+
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+
