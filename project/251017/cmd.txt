@@ -1,0 +1,70 @@
+geth account new --datadir data
+geth init --datadir data genesis.json
+geth --identity "MC" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --http.port 8545 --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --ws.port 8546 --networkid 7156777  --unlock "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77"  --miner.etherbase "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77" --nodiscover --password password
+nohup geth --identity "MC" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --http.port 8545 --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --ws.port 8546 --networkid 7156777  --unlock "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77"  --miner.etherbase "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77" --nodiscover --password password & echo "Geth started on node 1"
+export ETHEREUM_JSONRPC_VARIANT=geth
+export BLOCK_TRANSFORMER=clique
+export ETHEREUM_JSONRPC_HTTP_URL=http://127.0.0.1:8545
+export ETHEREUM_JSONRPC_WS_URL=ws://127.0.0.1:8546
+export ECTO_USE_SSL=false
+export CHAIN_SPEC_PATH="/root/learn/github/my_geth/genesis.json"
+export CHAIN_ID=7156777
+export SECRET_KEY_BASE=VTIB3uHDNbvrY0+60ZWgUoUBKDn9p
+geth --syncmode light --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*"  --nodiscover 
+
+
+geth init --datadir data genesis.json
+
+geth --identity "MC" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --http.port 8545 --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --ws.port 8546 --networkid 7156777  --unlock "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77"  --miner.etherbase "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77" --nodiscover --password password
+
+
+# 1. 重启两个服务
+docker restart stats backend
+
+# 2. 检查服务状态
+docker ps
+
+# 3. 查看 backend 日志，发现崩溃原因
+docker logs backend --tail 50
+
+# 4. 查看 stats 日志，发现 502 错误和数据库问题
+docker logs stats --tail 50
+
+# 5. 检查 dets 目录权限
+docker exec backend ls -la ./dets/
+
+# 6. 确认用户身份
+docker exec backend whoami
+
+# 7. 尝试创建文件（权限不足）
+docker exec backend touch ./dets/queue_storage
+
+# 8. 以 root 用户修复目录权限
+docker exec --user root backend chown -R blockscout:blockscout ./dets/
+
+# 9. 再次创建文件（成功）
+docker exec backend touch ./dets/queue_storage
+
+# 10. 重启 backend 服务
+docker restart backend
+
+# 11. 检查 backend 状态
+docker ps --filter "name=backend"
+
+# 12. 等待并检查 backend 日志
+sleep 10 && docker logs backend --tail 10
+
+# 13. 再次查看详细 backend 日志，发现新错误（not_a_dets_file）
+docker logs backend --tail 50
+
+# 14. 删除损坏的 dets 文件
+docker exec backend rm -f ./dets/queue_storage
+
+# 15. 重启 backend
+docker restart backend
+
+# 16. 最终验证 backend 正常
+sleep 15 && docker logs backend --tail 20
+
+# 17. 检查 stats 服务状态
+docker logs stats --tail 50

@@ -3,7 +3,7 @@ git clone https://github.com/ZHAOMEIproject/blockscout.git
 
 apt install software-properties-common -y
 add-apt-repository -y ppa:ethereum/ethereum
-apt-get install ethereum -y
+apt-get install ethereum@1.13.15 -y
 
 lsof -i:9545
 geth attach rpc:http://127.0.0.1:9545
