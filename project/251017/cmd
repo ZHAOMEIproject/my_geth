@@ -1,0 +1,41 @@
+geth init --datadir data genesis.json
+nohup geth --identity "MC" --datadir data --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --http.port 8545 --mine --allow-insecure-unlock --http.vhosts=* --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --ws.port 8546 --networkid 88813  --unlock "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77"  --miner.etherbase "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77" --nodiscover --password password & echo "Geth started on node 1"
+geth --identity "MC2" \
+     --datadir data \
+     --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --http.port 8545 --http.vhosts=* \
+     --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --ws.port 8546 \
+     --bootnodes "enode://3031ba282e7711241150490053a0e55b08ceccffa51bf8e2794c2b37881756fc9d51cac6dbec70e65285a65047738fda500b4dd6088f726e5590d66ebb0e386b@8.219.56.226:30303" \
+     --networkid 88813  \
+     --gcmode archive --syncmode full --cache 8192 \
+     --mine --allow-insecure-unlock \
+     --unlock "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77"  --miner.etherbase "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77" --password password
+
+单纯多个nohup
+nohup geth --identity "MC2" \
+     --datadir data \
+     --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --http.port 8545 --http.vhosts=* \
+     --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --ws.port 8546 \
+     --bootnodes "enode://3031ba282e7711241150490053a0e55b08ceccffa51bf8e2794c2b37881756fc9d51cac6dbec70e65285a65047738fda500b4dd6088f726e5590d66ebb0e386b@8.219.56.226:30303" \
+     --networkid 88813  \
+     --gcmode archive --syncmode full --cache 8192 \
+     --mine --allow-insecure-unlock \
+     --unlock "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77"  --miner.etherbase "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77" --password password & echo "Geth started on node 1"
+
+迁移教程
+关停旧的，压缩打包转到新的。
+然后
+rm -f data/geth/nodekey
+再启动
+     --bootnodes "enode://3031ba282e7711241150490053a0e55b08ceccffa51bf8e2794c2b37881756fc9d51cac6dbec70e65285a65047738fda500b4dd6088f726e5590d66ebb0e386b@8.219.56.226:30303" \
+
+
+旧节点启动命令
+nohup geth --identity "MC" \
+    --datadir data \
+    --http --http.addr 0.0.0.0 --http.api "admin,eth,net,txpool,personal,web3,debug" --http.corsdomain "*" --http.port 8545 --http.vhosts=* \
+    --ws --ws.addr 0.0.0.0 --ws.api "admin,eth,net,txpool,personal,web3,debug " --ws.origins "*" --ws.port 8546 \
+    --networkid 88813  \
+    --gcmode archive --syncmode full --cache 8192 \
+    --bootnodes "enode://8e7f4e58f97e6ab48e54e0bf76de1e0dfdd17acab928d130f1a180b17ac8870f04008b187315014cadac76e906bdc4cf6c15b94637345880c2dfcdb7feffba93@47.237.105.101:30303" \
+    --mine --allow-insecure-unlock \
+    --unlock "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77"  --miner.etherbase "0xC98ec3e2c7B958AdF5D9D6148113B759Aa22cD77" --nodiscover --password password & echo "Geth started on node 1"

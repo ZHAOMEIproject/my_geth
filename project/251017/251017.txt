@@ -1,9 +1,0 @@
-币名：MC
-发行多少：一亿枚
-收款地址：
-0x89340EDf68Eb064D3178E184e969957bCE868731
-公链logo
-
-推特
-discord
-telegram
